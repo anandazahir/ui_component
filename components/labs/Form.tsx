@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { motion, useAnimation, AnimatePresence } from "framer-motion"; // Import Framer Motion
+import { motion, useAnimation } from "framer-motion"; // Import Framer Motion
 import { Send } from "lucide-react";
 
 interface FormData {
@@ -35,10 +35,10 @@ export const Form: React.FC = () => {
   const messageBorderControls = useAnimation();
 
   // State untuk animasi tombol
-  const [isClicked, setIsClicked] = useState(false);
 
   const validateForm = (): boolean => {
     let isValid = true;
+
     const newErrors: FormErrors = { fullName: "", email: "", message: "" };
 
     if (!formData.fullName.trim()) {
@@ -67,17 +67,11 @@ export const Form: React.FC = () => {
     e.preventDefault();
 
     if (validateForm()) {
-      // Trigger button animation
-      setIsClicked(true);
-
       // Simulate form submission (e.g., API call)
       setTimeout(() => {
         // Clear form data
         setFormData({ fullName: "", email: "", message: "" });
         // Show success toast
-
-        // Reset button animation after 2 seconds
-        setTimeout(() => setIsClicked(false), 100);
       }, 700); // Simulate a delay for the API call
     }
   };

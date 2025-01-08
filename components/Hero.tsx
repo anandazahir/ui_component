@@ -1,11 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
+
 import { UnderlineSpan } from "@/components/ui/UnderlineSpan";
 import { RotatingLetter } from "@/components/ui/RotatingLetter";
 import { Book, Star } from "lucide-react";
-import { ColorPicker } from "./labs/ColorPicker";
+
 import Link from "next/link";
 
 export default function Hero() {

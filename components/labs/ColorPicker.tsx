@@ -82,7 +82,7 @@ export const ColorPicker: React.FC<ColorPickerProps> = ({ value }) => {
           {colorOptions.map((colorOption) => (
             <Button
               key={colorOption.value}
-              className={`w-8 h-8 rounded-full dark:${colorOption.value} ${colorOption.value} hover:scale-110 transition-transform`}
+              className={`w-8 h-8 rounded-full dark:${colorOption.value} ${colorOption.value} hover:scale-110 hover:${colorOption.value} dark:hover:${colorOption.value} transition-transform`}
               onClick={() => handleSelectColor(colorOption.value)}
             >
               {colorOption.value === color && (

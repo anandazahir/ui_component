@@ -3,7 +3,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 
 export const metadata = {
-  title: "Modern UI Components",
+  title: "UI-Nanda",
   description: "Handcrafted and homegrown components for your next project",
 };
 

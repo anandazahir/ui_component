@@ -43,14 +43,20 @@ export default function Hero() {
         </div>
 
         <div className="flex flex-col sm:flex-row justify-center gap-4 mb-6">
-          <Button size="lg" className="rounded-full font-mono w-full sm:w-auto">
+          <Link
+            className="rounded-full font-mono w-full sm:w-fit dark:bg-white bg-black dark:text-black text-white flex p-3 gap-2"
+            href="https://github.com/anandazahir/ui_component"
+          >
             <Book />
-            <Link href="github.com/anandazahir">Read the Docs</Link>
-          </Button>
-          <Button size="lg" className="rounded-full font-mono w-full sm:w-auto">
+            Read the Docs
+          </Link>
+          <Link
+            className="rounded-full font-mono w-full sm:w-fit dark:bg-white bg-black dark:text-black text-white flex p-3 gap-2"
+            href="https://github.com/anandazahir/ui_component"
+          >
             <Star />
-            <Link href="github.com/anandazahir">Read the Docs</Link>
-          </Button>
+            Star on Github
+          </Link>
         </div>
       </motion.div>
     </div>

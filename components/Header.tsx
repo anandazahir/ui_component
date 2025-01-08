@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 import { Switch } from "@/components/ui/switch";
 
 export default function Header() {
-  const { setTheme, theme } = useTheme();
+  const { setTheme, theme, resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -18,7 +18,8 @@ export default function Header() {
 
   const toggleTheme = () => {
     console.log("Toggling theme. Current theme:", theme);
-    setTheme(theme === "dark" ? "light" : "dark");
+    if (!mounted) return;
+    setTheme(resolvedTheme === "dark" ? "light" : "dark");
   };
 
   if (!mounted) {
@@ -40,7 +41,7 @@ export default function Header() {
           <div className="flex items-center space-x-2">
             <SunIcon className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
             <Switch
-              checked={theme === "dark"}
+              checked={resolvedTheme === "dark"}
               onCheckedChange={toggleTheme}
               aria-label="Toggle dark mode"
             />

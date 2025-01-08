@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { twMerge } from "tailwind-merge";
 
@@ -10,7 +10,7 @@ interface AnimatedButtonProps {
   children: React.ReactNode;
   className?: string;
   classNameText?: string;
-  variants?: any;
+  variants?: Variants;
   isActive?: boolean; // Changed from isClick to isActive
 }
 
